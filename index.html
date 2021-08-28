@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        cursor: context-menu;
+        font-family: "segoe ui", consolas;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        position: relative;
+      }
+      .div {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        height: 100vh;
+      }
+      .uno {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+      }
+      .dos {
+        width: 75%;
+        height: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: space-evenly;
+      }
+      .botones {
+        width: 100%;
+        height: 40%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+      }
+
+      audio {
+        width: 200px;
+        opacity: 0;
+        height: 80px;
+        border: 1px solid gray;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      p {
+        font-size: 1.1rem;
+        text-align: center;
+        transition: 0.3s ease-in;
+        height: 40px;
+        cursor: pointer;
+        color: rgb(80, 75, 75);
+      }
+      p:hover {
+        background: linear-gradient(to right, violet, orange);
+        color: white;
+      }
+      p i {
+        font-size: 1.5rem;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        width: 50%;
+        height: 50%;
+        border-radius: 10px;
+        animation: rotate 6s infinite linear 1s;
+      }
+
+      i {
+        font-size: 6rem;
+        text-align: center;
+        transition: 0.2s ease-in;
+      }
+      i:active {
+        transform: scale(0.8);
+      }
+      .hi {
+        height: 50px;
+        background: linear-gradient(to right, violet, orange);
+        color: white;
+      }
+      .flota {
+        animation: flotar 2s infinite linear;
+      }
+      @keyframes flotar {
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+      @media screen and (max-width: 900px) {
+        .uno,
+        .dos {
+          width: 100%;
+          height: 50%;
+        }
+
+        .img {
+          width: 40%;
+          height: 30%;
+        }
+        .div {
+          height: 900px;
+        }
+        .cajas i {
+          font-size: 2.5rem;
+        }
+        .botones {
+          height: 60%;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(5, 1fr);
+        }
+      }
+      .cajas {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        align-content: center;
+      }
+      .btn1,
+      .btn2,
+      .btn3,
+      .btn4,
+      .btn5 {
+        box-shadow: 0px 4px 5px rgb(179, 176, 176);
+      }
+    </style>
+  </head>
+  <body>
+    <audio
+      src="https://cdn2.melodyloops.com/mp3/preview-birth-of-a-hero.ogg"
+      controls
+      loop
+      autoplay
+      id="audio1"
+    ></audio>
+    <audio
+      src="https://cdn2.melodyloops.com/mp3/preview-ancient-worlds.ogg"
+      controls
+      loop
+      autoplay
+      id="audio2"
+    ></audio>
+    <audio
+      src="https://cdn2.melodyloops.com/mp3/preview-irish-dance.mp3"
+      controls
+      loop
+      autoplay
+      id="audio3"
+    ></audio>
+    <audio
+      src="https://cdn2.melodyloops.com/mp3/preview-prelude-to-battle.mp3"
+      controls
+      loop
+      autoplay
+      id="audio4"
+    ></audio>
+    <audio
+      src="https://cdn2.melodyloops.com/mp3/preview-adventure-time.mp3"
+      controls
+      loop
+      autoplay
+      id="audio5"
+    ></audio>
+    <div class="div">
+      <div class="uno">
+        <h2>Colección de canciones de la edad media.</h2>
+        <p class="can1">
+          <i class="bx bx-music"></i> Canción 1 - Bosques medievales
+        </p>
+        <p class="can2">
+          <i class="bx bx-music"></i> Canción 2 - Temerarios medievales
+        </p>
+        <p class="can3">
+          <i class="bx bx-music"></i> Canción 3 - Manual del caballero
+        </p>
+        <p class="can4">
+          <i class="bx bx-music"></i> Canción 4 - Las flechas de la vida
+        </p>
+        <p class="can5">
+          <i class="bx bx-music"></i> Canción 5 - Los nuevos reyes
+        </p>
+      </div>
+      <div class="dos">
+        <img
+          class="img"
+          src="https://okdiario.com/img/2021/02/25/caballeros-medievales-1.jpg"
+          title="medievo-pic"
+          alt="medievo-pic"
+        />
+        <div class="botones">
+          <div class="cajas btn1">
+            <i class="bx bx-play play1" title="reproduce la cancion1"></i>
+            <i class="bx bx-pause off1" title="pausa la canción"></i>
+            <p>Canción 1</p>
+          </div>
+          <div class="cajas btn2">
+            <i class="bx bx-play play2" title="reproduce la cancion2"></i>
+            <i class="bx bx-pause off2" title="pausa la canción"></i>
+            <p>Canción 2</p>
+          </div>
+          <div class="cajas btn3">
+            <i class="bx bx-play play3" title="reproduce la cancion3"></i>
+            <i class="bx bx-pause off3" title="pausa la canción"></i>
+            <p>Canción 3</p>
+          </div>
+          <div class="cajas btn4">
+            <i class="bx bx-play play4" title="reproduce la cancion4"></i>
+            <i class="bx bx-pause off4" title="pausa la canción"></i>
+            <p>Canción 4</p>
+          </div>
+          <div class="cajas btn5">
+            <i class="bx bx-play play5" title="reproduce la cancion5"></i>
+            <i class="bx bx-pause off5" title="pausa la canción"></i>
+            <p>Canción 5</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
